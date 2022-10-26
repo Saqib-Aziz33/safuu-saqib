@@ -6,9 +6,15 @@ function Base({ children }) {
   return (
     <>
       <Header />
-      <Box ps={4} display="flex">
+      <Box ps={["unset", "unset", "4"]} display="flex">
         <Sidebar />
-        <Box as="main" role="main" p={4}>
+        <Box
+          as="main"
+          w={["full", "full", "calc(100% - 250px)"]}
+          role="main"
+          p={4}
+          className="main"
+        >
           {children}
         </Box>
       </Box>

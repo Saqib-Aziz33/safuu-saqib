@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 $clr-green: rgb(52, 196, 57);
 $header-height: 120px;
@@ -9,15 +8,13 @@ $header-height: 120px;
 }
 body{
     user-select: none;
+    color: white !important;
     height: 100vh;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('./media/app-bg.bfb12b5b.png') !important;
-}
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Raleway', sans-serif !important;
 }
 ::-webkit-scrollbar{
     width: 5px;
@@ -70,9 +67,49 @@ h1,h2,h3,h4,h5,h6{
         }
     }
 }
+.main{
+    height: calc(100vh - $header-height);
+    overflow-y: auto;
+}
 .sidebar{
     height: calc(100vh - $header-height);
     overflow-y: auto;
+    overflow-x: hidden;
+    border-left:2px solid #0b6a0e;
+    border-right:2px solid #0b6a0e;
+}
+
+.time-wrapper{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 1.2rem auto;
+    animation: glow-shadow 0.5s ease-in infinite alternate;
+    .time{
+        color: $clr-green;
+        animation: scale-up 0.5s ease-in infinite alternate;
+    }
+}
+@keyframes glow-shadow {
+    from{
+        box-shadow: 1px 1px 20px $clr-green;
+    }
+    to{
+        box-shadow: 1px 1px 30px $clr-green;
+    }
+}
+@keyframes scale-up {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
 }
 
 // ******************************* overrides *******************************
@@ -93,4 +130,7 @@ h1,h2,h3,h4,h5,h6{
     background: linear-gradient(90deg, #024b05, #36d33b) !important;
     color: white;
     border: 1px solid $clr-green !important;
+}
+.txt-light-green{
+    color: #07de0f;
 }

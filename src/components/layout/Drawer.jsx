@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { FaBars } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Drawer,
   DrawerBody,
@@ -17,6 +17,8 @@ import navigationData from "../util/navLinks.json";
 function HomeDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
+  const { pathname } = useLocation();
+
   return (
     <>
       <Button
@@ -53,10 +55,13 @@ function HomeDrawer() {
             <VStack gap={4}>
               {navigationData.map((item) => (
                 <Button
+                  key={item.text}
                   fontWeight="bold"
                   px={8}
                   w="full"
-                  className={`dark-green`}
+                  className={`dark-green ${
+                    pathname === item.link ? "bg-grad" : ""
+                  }`}
                 >
                   <Link
                     style={{
