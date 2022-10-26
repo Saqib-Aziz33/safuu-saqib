@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Dashboard",
+    "link": "/dashboard",
+    "img": "assets/dashboard.png"
+  },
+  {
+    "text": "Account",
+    "link": "/account",
+    "img": "assets/account.png"
+  },
+  {
+    "text": "Swap",
+    "link": "/swap",
+    "img": "assets/swap.png"
+  },
+  {
+    "text": "Calculator",
+    "link": "/calculator",
+    "img": "assets/calculator.png"
+  },
+  {
+    "text": "Analytics",
+    "link": "/analytics",
+    "img": "assets/analytics.png"
+  },
+  {
+    "text": "Docs",
+    "link": "/docs",
+    "img": "assets/docs.png"
+  }
+]

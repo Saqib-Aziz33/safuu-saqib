@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+$clr-green: rgb(52, 196, 57);
+$header-height: 120px;
+
+*{
+    font-family: 'Lato', sans-serif !important;
+}
+body{
+    user-select: none;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./media/app-bg.bfb12b5b.png') !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif !important;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $clr-green;
+    border-radius: 50px;
+}
+
+// ******************************* components *******************************
+.header{
+    border-bottom: 2px solid #0b6a0e;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    .icons{
+        .icon{
+            background-color: #011101;
+            border: 1px solid #013005;
+            cursor: pointer;
+            padding: 0.4rem;
+            border-radius: 4px;
+            color: white;
+            transition: all 0.2s linear;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .drop-down{
+        color: $clr-green;
+        cursor: pointer;
+        position: relative;
+        &:hover{
+            a{
+                display: block;
+            }
+        }
+        a{
+            display: none;
+            position: absolute;
+            bottom: -2rem;
+            left: 0;
+            width: 140px;
+            border-radius: 10px;
+            background-color: black;
+            font-weight: 600;
+            color: white;
+            padding: 0.5rem;
+        }
+    }
+}
+.sidebar{
+    height: calc(100vh - $header-height);
+    overflow-y: auto;
+}
+
+// ******************************* overrides *******************************
+
+
+
+// ******************************* utils *******************************
+.light-green{
+    background: $clr-green !important;
+    color: white;
+}
+.dark-green{
+    background-color: #011101 !important;
+    border: 1px solid #013005 !important;
+    color: white;
+}
+.bg-grad{
+    background: linear-gradient(90deg, #024b05, #36d33b) !important;
+    color: white;
+    border: 1px solid $clr-green !important;
+}
