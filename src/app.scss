@@ -137,6 +137,26 @@ body{
     }
 }
 
+.analytics{
+    table{
+        width: 100%;
+        thead {
+            border-bottom: 1px solid silver;
+                tr {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    width: 100%;
+                    padding: 1rem;
+                    justify-content: space-between;
+        
+                    th {
+                        color: $clr-green !important;
+                    }
+                }
+            }
+    }
+}
+
 // ******************************* overrides *******************************
 
 

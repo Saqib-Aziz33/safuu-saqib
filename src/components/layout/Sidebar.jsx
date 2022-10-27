@@ -31,6 +31,22 @@ function Sidebar() {
             </Link>
           </Button>
         ))}
+        <Button fontWeight="bold" px={8} w="full" className={`dark-green`}>
+          <a
+            style={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+            target="_blank"
+            href="https://safuu.com"
+            rel="noreferrer noopener"
+          >
+            <img src="assets/docs.png" style={{ height: "20px" }} alt="" />
+            Docs
+          </a>
+        </Button>
       </VStack>
     </Box>
   );
