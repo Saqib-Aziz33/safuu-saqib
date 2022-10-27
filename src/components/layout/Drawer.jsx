@@ -64,6 +64,7 @@ function HomeDrawer() {
                   }`}
                 >
                   <Link
+                    onClick={onClose}
                     style={{
                       width: "100%",
                       display: "flex",

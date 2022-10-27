@@ -41,7 +41,7 @@ function Swap() {
           <Text>From:</Text>
           <Text mt={2}>0</Text>
         </Box>
-        <Box>
+        <Box textAlign="end">
           <Text>Balance: 0</Text>
           <Flex align="center">
             <Text className="txt-light-green">MAX</Text>
@@ -73,10 +73,9 @@ function Swap() {
           <Text>To:</Text>
           <Text mt={2}>0</Text>
         </Box>
-        <Box>
+        <Box textAlign="end">
           <Text>Balance: 0</Text>
           <Flex align="center">
-            <Text className="txt-light-green">MAX</Text>
             <Select
               border="none"
               bg="unset"
@@ -87,7 +86,6 @@ function Swap() {
                 BNB
               </option>
               <option style={{ background: "black" }} value="">
-                <img src="assets/bnb.svg" alt="" />
                 SAFUU
               </option>
             </Select>

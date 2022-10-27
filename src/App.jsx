@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 // layout
 import Base from "./components/layout/Base";
 // pages
-import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import Swap from "./pages/Swap";
@@ -14,8 +14,19 @@ import NotFound from "./pages/NotFound";
 // others
 import "animate.css";
 import "./app.scss";
+import Loading from "./components/elments/Loading";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  if (loading) return <Loading />;
+
   return (
     <>
       <BrowserRouter>
