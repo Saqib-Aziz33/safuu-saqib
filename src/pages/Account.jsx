@@ -4,7 +4,11 @@ import tableData from "../components/util/accountTable.json";
 
 function Account() {
   return (
-    <Box py={8} px={[2, 4, 12]}>
+    <Box
+      py={8}
+      px={[2, 4, 12]}
+      className="animate__animated animate__bounceInUp"
+    >
       <Grid
         gap={8}
         gridTemplateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}

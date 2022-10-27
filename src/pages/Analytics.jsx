@@ -10,7 +10,11 @@ import {
 
 function Analytics() {
   return (
-    <Container maxW={1000} my={4} className="analytics">
+    <Container
+      maxW={1000}
+      my={4}
+      className="analytics animate__animated animate__zoomInUp"
+    >
       <Grid
         gap={4}
         gridTemplateColumns={{

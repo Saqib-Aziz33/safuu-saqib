@@ -20,7 +20,12 @@ function Calculator() {
   const [days, setDays] = useState(50);
 
   return (
-    <Box py={8} px={[2, 4, 12]} fontWeight="bold" className="calculator">
+    <Box
+      py={8}
+      px={[2, 4, 12]}
+      fontWeight="bold"
+      className="calculator animate__animated animate__bounceInUp"
+    >
       <Container
         maxW={900}
         mt={8}

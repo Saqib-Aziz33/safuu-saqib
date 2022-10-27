@@ -1,10 +1,10 @@
-import { Grid, GridItem, Button, Heading, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Button, Heading, Box } from "@chakra-ui/react";
 import HeadingCard from "../components/elments/HeadingCard";
 import CountDownTimer from "../components/elments/CountDownTimer";
 
 function Dashboard() {
   return (
-    <>
+    <Box className="animate__animated animate__bounceIn">
       <Grid
         textAlign="center"
         w="full"
@@ -85,7 +85,7 @@ function Dashboard() {
           <HeadingCard heading="% FirePit : Supply" text="26.43%" />
         </GridItem>
       </Grid>
-    </>
+    </Box>
   );
 }
 export default Dashboard;

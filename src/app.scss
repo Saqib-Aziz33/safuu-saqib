@@ -157,6 +157,18 @@ body{
     }
 }
 
+.swap{
+    .bg-blue{
+        background: linear-gradient(95.13deg, rgba(22, 24, 48, .25), rgba(46, 51, 92, .25));
+        padding: 1rem;
+        border-radius: 20px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #16172e;
+        box-shadow: 5px 5px 7px -5px #000;
+    }
+}
+
 // ******************************* overrides *******************************
 
 
@@ -184,4 +196,7 @@ body{
 }
 .light-green-border-high{
     border: 2px solid #07de0f;
+}
+.back-blur{
+    backdrop-filter: blur(5px) !important;
 }

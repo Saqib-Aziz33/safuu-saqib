@@ -12,6 +12,7 @@ import Analytics from "./pages/Analytics";
 import Docs from "./pages/Docs";
 import NotFound from "./pages/NotFound";
 // others
+import "animate.css";
 import "./app.scss";
 
 function App() {
