@@ -5,6 +5,7 @@ $header-height: 120px;
 
 *{
     font-family: 'Lato', sans-serif !important;
+    font-weight: bold;
 }
 body{
     user-select: none;
@@ -112,6 +113,30 @@ body{
     }
 }
 
+.calculator{
+    .input-wrapper{
+        position: relative;
+        .chakra-input {
+                background-color: rgba(128, 128, 128, 0.295) !important;
+                border-radius: 10px;
+                font-weight: bold;
+                padding-top: 1.4rem !important;
+                padding-bottom: 1.4rem !important;
+        
+                &:focus {
+                    border-color: unset;
+                    outline: unset;
+                }
+            }
+        span{
+            cursor: pointer;
+            position: absolute;
+            bottom: 0.8rem;
+            right: 1rem;
+        }
+    }
+}
+
 // ******************************* overrides *******************************
 
 
@@ -136,4 +161,7 @@ body{
 }
 .light-green-border{
     border: 1px solid #0b6a0e;
+}
+.light-green-border-high{
+    border: 2px solid #07de0f;
 }

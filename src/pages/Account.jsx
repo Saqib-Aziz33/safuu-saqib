@@ -7,11 +7,7 @@ function Account() {
     <Box py={8} px={[2, 4, 12]}>
       <Grid
         gap={8}
-        gridTemplateColumns={[
-          "repeat(1, 1fr)",
-          "repeat(2, 1fr)",
-          "repeat(3, 1fr)",
-        ]}
+        gridTemplateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
         textAlign="center"
         fontWeight="bold"
       >
