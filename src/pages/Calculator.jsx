@@ -17,6 +17,7 @@ import { useState } from "react";
 
 function Calculator() {
   const [days, setDays] = useState(50);
+  const [safuuAmount, setSafuuAmount] = useState(0);
 
   return (
     <Box
@@ -75,22 +76,42 @@ function Calculator() {
         >
           <GridItem className="input-wrapper">
             <Text>Safuu Amount</Text>
-            <Input contentEditable={false} type="text" value="0" />
+            <Input
+              color="gray"
+              type="number"
+              value={safuuAmount}
+              onChange={(e) => setSafuuAmount(e.target.value)}
+            />
             <span>Max</span>
           </GridItem>
           <GridItem className="input-wrapper">
             <Text>APY (%)</Text>
-            <Input contentEditable={false} type="text" value="383025.8" />
+            <Input
+              contentEditable={false}
+              type="number"
+              value="383025.8"
+              color="gray"
+            />
             <span>Current</span>
           </GridItem>
           <GridItem className="input-wrapper">
             <Text>SAFUU price at purchase ($)</Text>
-            <Input contentEditable={false} type="text" value="1.56" />
+            <Input
+              contentEditable={false}
+              type="number"
+              value="1.56"
+              color="gray"
+            />
             <span>Current</span>
           </GridItem>
           <GridItem className="input-wrapper">
             <Text>Future SAFUU market price ($)</Text>
-            <Input contentEditable={false} type="text" value="1.56" />
+            <Input
+              contentEditable={false}
+              type="number"
+              value="1.56"
+              color="gray"
+            />
             <span>Current</span>
           </GridItem>
 
@@ -129,19 +150,21 @@ function Calculator() {
         <Box mt={8}>
           <HStack justifyContent="space-between" my={3} gap={2}>
             <Text size="md">Your initial investment</Text>
-            <Text size="md">$0</Text>
+            <Text size="md">${(safuuAmount * 1.552).toFixed(2)}</Text>
           </HStack>
           <HStack justifyContent="space-between" my={3} gap={2}>
             <Text size="md">Current wealth</Text>
-            <Text size="md">$0</Text>
+            <Text size="md">${(safuuAmount * 1.552).toFixed(2)}</Text>
           </HStack>
           <HStack justifyContent="space-between" my={3} gap={2}>
             <Text size="md">SAFUU rewards estimation</Text>
-            <Text size="md">0 SAFUU</Text>
+            <Text size="md">
+              {(safuuAmount * 1.552 * days).toFixed(4)} SAFUU
+            </Text>
           </HStack>
           <HStack justifyContent="space-between" my={3} gap={2}>
             <Text size="md">Potential return</Text>
-            <Text size="md">$0</Text>
+            <Text size="md">${(safuuAmount * 0.2 * days).toFixed(4)}</Text>
           </HStack>
         </Box>
       </Container>

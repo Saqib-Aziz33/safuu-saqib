@@ -6,8 +6,13 @@ import {
   Text,
   Select,
   Button,
+  Tooltip,
 } from "@chakra-ui/react";
-import { AiTwotoneSetting, AiOutlineReload } from "react-icons/ai";
+import {
+  AiTwotoneSetting,
+  AiOutlineReload,
+  AiOutlineQuestionCircle,
+} from "react-icons/ai";
 import { IoSwapVertical } from "react-icons/io5";
 
 function Swap() {
@@ -105,19 +110,71 @@ function Swap() {
 
       <Box className="bg-blue" mt={4}>
         <Flex justifyContent="space-between" my={2}>
-          <Text>Minimum received</Text>
+          <Box display="flex" gap={2} alignItems="center">
+            <Text>Minimum received</Text>
+            <Tooltip
+              hasArrow
+              label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, asperiores?"
+              bg="gray.300"
+              color="black"
+              placement="top"
+            >
+              <span>
+                <AiOutlineQuestionCircle />
+              </span>
+            </Tooltip>
+          </Box>
           <Text>0 SAFUU</Text>
         </Flex>
         <Flex justifyContent="space-between" my={2}>
-          <Text>Price Impact</Text>
+          <Box display="flex" gap={2} alignItems="center">
+            <Text>Price Impact</Text>
+            <Tooltip
+              hasArrow
+              label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, asperiores?"
+              bg="gray.300"
+              color="black"
+              placement="top"
+            >
+              <span>
+                <AiOutlineQuestionCircle />
+              </span>
+            </Tooltip>
+          </Box>
           <Text>0%</Text>
         </Flex>
         <Flex justifyContent="space-between" my={2}>
-          <Text>Liquidity Provider Fee</Text>
+          <Box display="flex" gap={2} alignItems="center">
+            <Text>Liquidity Provider Fee</Text>
+            <Tooltip
+              hasArrow
+              label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, asperiores?"
+              bg="gray.300"
+              color="black"
+              placement="top"
+            >
+              <span>
+                <AiOutlineQuestionCircle />
+              </span>
+            </Tooltip>
+          </Box>
           <Text>0% - No Fee</Text>
         </Flex>
         <Flex justifyContent="space-between" my={2}>
-          <Text>Route</Text>
+          <Box display="flex" gap={2} alignItems="center">
+            <Text>Route</Text>
+            <Tooltip
+              hasArrow
+              label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, asperiores?"
+              bg="gray.300"
+              color="black"
+              placement="top"
+            >
+              <span>
+                <AiOutlineQuestionCircle />
+              </span>
+            </Tooltip>
+          </Box>
           <Text>SAFUU {"< -- >"} BNB</Text>
         </Flex>
       </Box>
